@@ -16,7 +16,7 @@ end
 
 defmodule Parameter do
   @derive [Poison.Encoder]
-  defstruct [:DATA_FORMAT, :NARROWING_COND, :STATS_DATA_ID]
+  defstruct [:LANG, :DATA_FORMAT, :NARROWING_COND, :STATS_DATA_ID, :START_POSITION, :METAGET_FLG]
 end
 
 defmodule NarrowingCond do

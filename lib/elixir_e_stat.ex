@@ -26,7 +26,9 @@ defmodule ElixirEStat do
   def parse(_content) do
     with {:ok, content} <- _content
     do
-      parsed = Poison.decode!(content.body, 
+      IO.puts content.body
+      parsed = Poison.decode!(
+        content.body, 
         as: %EStatResponse{GET_STATS_DATA: %GetStatsData{PARAMETER: %Parameter{NARROWING_COND: %NarrowingCond{}}}})
     else
       {:error, e} -> IO.puts "ERROR" <> e
